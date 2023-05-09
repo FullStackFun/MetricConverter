@@ -18,20 +18,20 @@ app.route('/api/convert').get(function (request, response) {
   let toString = convertHandler.getString(initNum, initUnit, returnNum, returnUnit)
 
 
-  console.log(input)
+  //console.log(input)
 
   if (initNum == 'invalid number' && initUnit == 'invalid unit') {
-    console.log('api invalid double')
+ //   console.log('api invalid double')
     response.json('invalid number and unit')
   }
 
   if (initUnit == 'invalid unit') {
-    console.log('api invalid unit')
+   // console.log('api invalid unit')
     response.json(initUnit)
   }
 
   if (initNum == 'invalid number') {
-    console.log('api invalid number')
+   // console.log('api invalid number')
     response.json(initNum)
   }
 

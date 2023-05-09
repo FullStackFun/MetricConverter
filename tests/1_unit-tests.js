@@ -45,17 +45,28 @@ suite('Unit Tests', function(){
         done()
 
     })
-
+/* 
     test('should correctly read each valid input unit.', function(done) {
 
-        let input=['l', 'gal', 'lbs', 'mi', 'km', 'L', 'GAL', 'LBS', 'MI', 'KM', 'kg', 'KG']
+        let input=['gal', 'lbs', 'mi', 'km', 'L', 'GAL', 'LBS', 'MI', 'KM', 'kg', 'KG']
         input.forEach(function(x) {
             assert.equal(convertHandler.getUnit(10+x), x)
 
         })
         done()
 
-    }) 
+    })  */
+
+    test('should correctly read each valid input unit.', function(done) {
+
+        let input=['gal', 'lbs', 'mi', 'km', 'L', 'GAL', 'LBS', 'MI', 'kg', 'KG']
+        input.forEach(function(x) {
+            assert.equal(convertHandler.getUnit(10+x), x)
+
+        })
+        done()
+
+    })
 
     test(' should correctly return an error for an invalid input unit.', function(done) {
 

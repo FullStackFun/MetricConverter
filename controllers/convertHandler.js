@@ -43,13 +43,19 @@ function ConvertHandler() {
     }
 
     let validity = ['l', 'gal', 'lbs', 'mi', 'km', 'L', 'GAL', 'LBS', 'MI', 'KM', 'kg', 'KG']
-    if (validity.includes(result) == false) {
+    if (result == 'l') {
+      return 'L'
+    }
+
+    if (result == 'KM') {
+      return 'km'
+    }
+
+    else if (validity.includes(result) == false) {
      // console.log('invalid unit', 'from this.getUnit')
-
-
-
       result =  'invalid unit'
     }
+    
     
     return result;
   };
@@ -71,6 +77,7 @@ function ConvertHandler() {
       return 'gal'
     }
     if (result === 'gal' || result === 'GAL') {
+
       return 'L'
     }
 
@@ -122,8 +129,8 @@ function ConvertHandler() {
       
     }
 
-  console.log(result)
-  console.log(typeof result, "result type of")
+ // console.log(result)
+ // console.log(typeof result, "result type of")
   //console.log(typeof result.toFixed(5), "fixed result")
 
     
@@ -143,7 +150,7 @@ function ConvertHandler() {
       initUnitString = 'gallons'
     }
     else if (initUnit === 'l' || initUnit === 'L') {
-      initUnitString = 'liters'
+      initUnitString = 'Liters'
     }
     else if (initUnit === 'lbs' || initUnit === 'LBS') {
      initUnitString = 'pounds'
@@ -163,7 +170,7 @@ function ConvertHandler() {
       returnUnitString = 'gallons'
     }
     else if (returnUnit === 'l' || returnUnit === 'L') {
-      returnUnitString = 'liters'
+      returnUnitString = 'Liters'
     }
     else if (returnUnit === 'lbs' || returnUnit === 'LBS') {
      returnUnitString = 'pounds'
